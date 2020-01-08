@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>upload</title>
+</head>
+
+<body>
+    <a href="{{ url_for('home') }}" style="float: right;">Home&nbsp;</a>
+    <h4>Please upload CSV file</h4>
+    <br>
+    <br>
+    <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <br>
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+
+</html>

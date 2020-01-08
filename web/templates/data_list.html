@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>List</title>
+
+    <a href="{{ url_for('home') }}" style="float: right;">Home&nbsp;</a>
+    <h3>Datas Listing</h3>
+    <br>
+    
+    {% if results %}
+    
+        <table style="" border="1">
+            <tr style="padding: 35;">
+                <th>id</th>
+                <th>temperature</th>
+                <th>timestamp</th>
+                <th>duration</th>
+            </tr>
+            {% for i in results %}
+                <tr style="padding: 35;">
+                    <td>{{ i.id }}</td>
+                    <td>{{ i.temperature }}</td>
+                    <td>{{ i.timestamp }}</td>
+                    <td>{{ i.duration }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h5>No data found. Try uploading CSV file</h5>
+    {% endif %}
+
+</body>

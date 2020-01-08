@@ -1,0 +1,7 @@
+__pycache__/
+web/log/*
+!web/log/.gitkeep
+web/uploads/*
+!web/uploads/.gitkeep
+web/venv
+.vscode/
